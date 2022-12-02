@@ -1,0 +1,2 @@
+with open("day2_input.txt", "r") as f:
+    print(sum([y[1] + (6 if (y[0] - y[1]) % 3 == 2 else 0 if (y[0] - y[1]) % 3 == 1 else 3) for y in [[int(x[0]), int(x[2])] for x in f.read().replace("A", "1").replace("X", "1").replace("B", "2").replace("Y", "2").replace("C", "3").replace("Z", "3").split("\n")]]))

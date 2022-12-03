@@ -1,0 +1,2 @@
+with open("day3_input.txt", "r") as f:
+    print(sum([z - 38 if z < 91 else z - 96 for z in [ord(''.join(set(f.readline().strip()).intersection(f.readline().strip()).intersection(f.readline().strip()))) for i in range(0, sum(1 for line in open('day3_input.txt')), 3)]]))

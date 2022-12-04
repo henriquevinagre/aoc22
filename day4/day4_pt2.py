@@ -1,0 +1,2 @@
+with open("day4_input.txt", "r") as f:
+    print(sum([1 if any(a in y[1] for a in y[0]) else 0 for y in [[range(int(x.split(",")[0].split("-")[0]), int(x.split(",")[0].split("-")[1]) + 1), range(int(x.split(",")[1].split("-")[0]), int(x.split(",")[1].split("-")[1]) + 1)] for x in f.read().splitlines()]]))
